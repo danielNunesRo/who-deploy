@@ -7,8 +7,6 @@ COPY . .
 RUN apt-get install maven -y
 RUN mvn clean install
 
-ENTRYPOINT ["java", "-jar", "/app.jar"]
-
 FROM openjdk:17-slim
 
 EXPOSE 8080
